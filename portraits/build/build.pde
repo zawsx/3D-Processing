@@ -1,6 +1,9 @@
-// Using an underlying layer for color-point reference and re-drawing atop those spaces
+// # Portraits
+// Used for an idea of drawing a face from a pixel-reference for color data
 
-// Idea: Mask over original photo and mask-paint out for clarity!!!
+// Idea: Using an underlying layer for color-point reference and re-drawing atop those spaces
+// Idea: Mask over original photo and mask-paint out for clarity
+// Idea: Render one out with very small boxes and then layer it atop one made with larger boxes
 
 HRect d;
 HPixelColorist colors;
@@ -51,5 +54,3 @@ void setup(){
 
   H.drawStage();
 }
-
-// IDEA: Render one out with very small boxes and then layer it atop one made with larger boxes

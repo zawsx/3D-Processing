@@ -1,3 +1,5 @@
+// # Glitches and shifting color registration
+
 int redBuffer;
 int blueBuffer;
 int greenBuffer;
@@ -14,7 +16,7 @@ void setup(){
   display = createImage(100,100,RGB);
   frameRate(15);
 
-  size(display.width,display.height); 
+  size(display.width,display.height);
 
 }
 
