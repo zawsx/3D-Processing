@@ -12,11 +12,11 @@ HColorPool colors;
 HDrawablePool pool;
 
 void setup() {
-  size(200,200);
+  size(2048,2048);
   H.init(this).background(#202020);
   smooth();
 
-  colors = new HColorPool(#C92854, #0F4065, #26A3A8, #FFC06E, #D44A4A, #2D312F, #333333);
+  colors = new HColorPool(#C4DD47, #C92854, #0F4065, #26A3A8, #FFC06E, #D44A4A);
 
    PFont type = createFont("DINPro-Bold.otf", 24);
 
@@ -41,6 +41,31 @@ void setup() {
   ;
 
   H.drawStage();
+
+
+  pool = new HDrawablePool(2);
+  pool.autoAddToStage()
+    .add (new HText( "Generative Art", 24, type ))
+
+    .onCreate (
+      new HCallback() {
+        public void run(Object obj) {
+          HText t = (HText) obj;
+          t.fill( #FFFFFF );
+          t.scale( ((int)random(10)));
+          t.anchorAt(H.CENTER);
+          t.loc( (width/2), (height/8) );
+        }
+      }
+    )
+
+    .requestAll()
+  ;
+
+  H.drawStage();
+
+
+
   noLoop();
 }
 
