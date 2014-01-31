@@ -25,6 +25,7 @@ void setup(){
 	H.init(this).background(#EEEEEE);
 	smooth();
 
+//  colors = new HColorPool(#FFFFFF,#D4004C,#E13D42,#FEC067,#3EAD99,#3798BB,#1E3662,#333333);
   colors = new HColorPool(
     #FFFFFF,
     #CCCCCC,
@@ -37,7 +38,7 @@ void setup(){
     #0000CC // visually-nice green
   );
 
-	pool = new HDrawablePool(50);
+	pool = new HDrawablePool(200);
 	pool.autoAddToStage()
     .add(new HShape("hand_01.svg"))
     .add(new HShape("hand_02.svg"))
@@ -108,6 +109,21 @@ void setup(){
     .add(new HShape("hand_67.svg"))
     .add(new HShape("hand_68.svg"))
     .add(new HShape("hand_69.svg"))
+
+    //.layout( // HDrawablePool now has a layout attached to it
+    //   new HGridLayout()
+    //   .startX(50) // how many pixels in from the image edge to begin
+    //   .startY(50)
+    //   .spacing(65,65) // the spacing between the cells, if set to a size smaller than the object, they will overlap!
+    //   .cols(15)
+
+     //   new HShapeLayout() // Shape layouts can apply shapes to non-transparent pixels
+     //   .target( // the shape’s target is a new HImage file
+     //     new HImage("cutieITEM.png") // it works well to make your shapeMap the size of your drawable’s canvas
+     //   )
+
+     // )
+
 		.onCreate(
 			new HCallback() {
 				public void run(Object obj) {
@@ -119,10 +135,15 @@ void setup(){
             .noStroke()
 						//.strokeWeight(1)
 						//.stroke(#333333)
-						.size( (int)random(50,150) )
-						.rotate( (int)random(360) )
-						.loc( (int)random(width), (int)random(height) )
+						
+            //.loc( (int)random(width), (int)random(height) ) // .layout above takes precedence if .loc is not present
 						.anchorAt(H.CENTER)
+
+            //.rotate( (int)random(360) )
+            .rotate( (int)random(8) * 45 ) // hard-locking rotation to 45 degree increments
+
+            //.size( (int)random(50,150) )
+            .size( 50 + ( (int)random(2) * 25 ) ) // 50, 75, 100
 					;
 					d.randomColors(colors.fillOnly()); //.fillOnly();, .strokeOnly();, or .fillAndStroke(); are options
 				}
