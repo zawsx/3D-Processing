@@ -26,19 +26,19 @@ void setup(){
   colorsText = new HColorPool(
     #B10000,#B20000,#B20001,#B20100,#B30000,#B30001,#B30100,#B40000,#B40001,#B40100,#B50000,#B50001,#B50100,#B60000,#B60001,#B60100,#B70000,#B70001,#B70100,#B80000,#B80001,#B80100,#B90000,#B90001,#B90100,#BA0000,#BA0001,#BA0100,#BB0000,#BB0001,#BB0100,#BC0000,#BC0001,#BC0100,#BD0000,#BD0001,#BD0100,#BE0000,#BE0001,#BE0100,#BF0000,#BF0001,#BF0100,#C00000,#C00001,#C00100,#C10000,#C10001,#C10100,#C20000,#C20001,#C20100,#C30000,#C30001,#C30100,#C40000,#C40001,#C40100,#C50000,#C50001,#C50100,#C60000,#C60001,#C60100,#C70000,#C70001,#C70100,#C80000,#C80001,#C80100,#C90000,#C90001,#C90100,#CA0000,#CA0001,#CA0100,#CB0000,#CB0001,#CB0100,#CC0000,#CC0001,#CC0100,#CD0000,#CD0001,#CD0100,#CE0000,#CE0001,#CE0100,#CF0000,#CF0001,#CF0100,#D00000,#D00001,#D00100,#D10000,#D20000,#D30000,#D40000,#D50000,#D60000,#D70000,#D80000,#D90000,#DA0000,#DB0000,#DC0000,#DD0000,#DE0000,#DF0000,#E00000,#E10000,#E20000,#E30000,#E40000,#E50000,#E60000,#E70000,#E80000,#EC0000,#EE0000
   );
-  colorsText.add(#FFFFFF,25); // inject some more instances of all-white 'Cutie' text
+  colorsText.add(#FFFFFF,30); // inject some more instances of all-white 'Cutie' text
 
   // HEARTS
-	pool = new HDrawablePool(5500);
+	pool = new HDrawablePool(5200);
 	pool.autoAddToStage()
-    .add(new HShape("icon_822.svg"),10)
-    .add(new HShape("icon_1308.svg"),10)
-    .add(new HShape("icon_5169.svg"),10)
-    .add(new HShape("icon_15259.svg"),20)
-    .add(new HShape("icon_17452.svg"),10)
-    .add(new HShape("icon_19821.svg"))
-    .add(new HShape("icon_25441.svg"))
-    .add(new HShape("icon_29424.svg"),20)
+    .add(new HShape("icon_822.svg"),2)
+    .add(new HShape("icon_1308.svg"))
+    .add(new HShape("icon_5169.svg"))
+    .add(new HShape("icon_15259.svg"),2)
+    .add(new HShape("icon_17452.svg"))
+    //.add(new HShape("icon_19821.svg"))
+    //.add(new HShape("icon_25441.svg"))
+    .add(new HShape("icon_29424.svg"),2)
 
     .layout( // HDrawablePool now has a layout attached to it
         new HShapeLayout()
@@ -58,7 +58,7 @@ void setup(){
             .noStroke()
 						.anchorAt(H.CENTER)
             .rotate( (int)random(72) * 5 ) // hard-locking rotation to 5 degree increments (360 degrees total)
-            .size( (int)random(4,35) )
+            .size( (int)random(5,35) )
 					;
 					d.randomColors(colorsHearts.fillAndStroke()); //.fillOnly();, .strokeOnly();, or .fillAndStroke(); are options
 				}
@@ -88,12 +88,13 @@ void setup(){
 int x = 1;
 void draw() {
   setup(); // re-shake the variables
-  if (x < 700) { // loop this many to output
+  if (x < 25) { // loop this many to output
     H.drawStage(); // render to screen
-    saveFrame("cuties/thinkITEM-###.png"); // Saves each frame
+    saveFrame("cuties/thinkITEM-###.png"); // Save each frame
     x++;
 
-      blankoutSquare = new HRect(); // An ugly hack, I need to learn how to blank the stage
+      // An ugly hack, I need to learn how to blank the stage
+      blankoutSquare = new HRect(); 
       blankoutSquare
         .noStroke()
         .fill(#FFFFFF)
