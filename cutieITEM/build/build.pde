@@ -11,7 +11,7 @@ HColorPool colorsText;
 HRect blankoutSquare;
 
 void setup(){
-	size(800,1000);
+  size(800,1000);
   H.init(this).background(#FFFFFF);
   smooth();
   PFont type = createFont("Bello-Pro.otf", 120);
@@ -29,8 +29,8 @@ void setup(){
   colorsText.add(#FFFFFF,30); // inject some more instances of all-white 'Cutie' text
 
   // HEARTS
-	pool = new HDrawablePool(5200);
-	pool.autoAddToStage()
+  pool = new HDrawablePool(5200);
+  pool.autoAddToStage()
     .add(new HShape("icon_822.svg"),2)
     .add(new HShape("icon_1308.svg"))
     .add(new HShape("icon_5169.svg"))
@@ -47,25 +47,25 @@ void setup(){
         )
      )
 
-		.onCreate(
-			new HCallback() {
-				public void run(Object obj) {
-					HShape d = (HShape) obj;
-					d
-						.enableStyle(false)
-						.strokeJoin(ROUND)
-						.strokeCap(ROUND)
+    .onCreate(
+      new HCallback() {
+        public void run(Object obj) {
+          HShape d = (HShape) obj;
+          d
+            .enableStyle(false)
+            .strokeJoin(ROUND)
+            .strokeCap(ROUND)
             .noStroke()
-						.anchorAt(H.CENTER)
+            .anchorAt(H.CENTER)
             .rotate( (int)random(72) * 5 ) // hard-locking rotation to 5 degree increments (360 degrees total)
             .size( (int)random(5,35) )
-					;
-					d.randomColors(colorsHearts.fillAndStroke()); //.fillOnly();, .strokeOnly();, or .fillAndStroke(); are options
-				}
-			}
-		)
-		.requestAll();
-	
+          ;
+          d.randomColors(colorsHearts.fillAndStroke()); //.fillOnly();, .strokeOnly();, or .fillAndStroke(); are options
+        }
+      }
+    )
+    .requestAll();
+  
   // TEXT
   pool2 = new HDrawablePool(1);
   pool2.autoAddToStage()
