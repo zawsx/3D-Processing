@@ -1,4 +1,4 @@
-// cutieITEM © 01/31/2014, Douglas Dollars
+// thinkCUTIE AKA cutieITEM © 01/31/2014, Douglas Dollars
 // Work for the @thinkITEM Twitter persona takeover
 
 // Idea: take the iconic thinkITEM brand, merge it with my use of generative art
