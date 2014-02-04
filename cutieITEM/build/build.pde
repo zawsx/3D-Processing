@@ -4,6 +4,9 @@
 // Idea: take the iconic thinkITEM brand, merge it with my use of generative art
 // and my love of recognizing everyone’s cuteness, and make a LOT of images for people
 
+// Piece description here: https://medium.com/generatived-art/5f0adb1b6e75
+// Process writeup here: https://medium.com/generatived-art/c7e467c7e524
+
 HDrawablePool pool;
 HDrawablePool pool2;
 HColorPool colorsHearts;
@@ -65,7 +68,7 @@ void setup(){
       }
     )
     .requestAll();
-  
+
   // TEXT
   pool2 = new HDrawablePool(1);
   pool2.autoAddToStage()
@@ -94,7 +97,7 @@ void draw() {
     x++;
 
       // An ugly hack, I need to learn how to blank the stage
-      blankoutSquare = new HRect(); 
+      blankoutSquare = new HRect();
       blankoutSquare
         .noStroke()
         .fill(#FFFFFF)
