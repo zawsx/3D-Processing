@@ -66,7 +66,7 @@ void setup(){
 int x = 1;
 void draw() {
   setup(); // re-shake the variables
-  if (x < 5) { // loop this many to output
+  if (x < 101) { // loop this many to output
     H.drawStage(); // render to screen
     saveFrame("cuties/thinkITEM2-###.png"); // Save each frame
     x++;
