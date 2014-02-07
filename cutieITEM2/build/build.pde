@@ -1,11 +1,7 @@
-// thinkCUTIE AKA cutieITEM © 01/31/2014, Douglas Dollars
-// Work for the @thinkITEM Twitter persona takeover
+// thinkCUTIE2 AKA cutieITEM2 © 01/31/2014, Douglas Dollars
+// Work for the @thinkITEM talk at CreativeMornings Edmonton 02/14/2014
 
-// Idea: take the iconic thinkITEM brand, merge it with my use of generative art
-// and my love of recognizing everyone’s cuteness, and make a LOT of images for people
-
-// Piece description here: https://medium.com/generatived-art/5f0adb1b6e75
-// Process writeup here: https://medium.com/generatived-art/c7e467c7e524
+// Idea: Using the base of the previous thinkCUTIE/cutieITEM work, allow attendees of CreativeMornings to make their own street art. Each piece will be unique and have a box allowing them to fill in their message.
 
 HDrawablePool pool;
 HDrawablePool pool2;
