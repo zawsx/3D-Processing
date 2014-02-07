@@ -3,6 +3,10 @@
 
 // Idea: Using the base of the previous thinkCUTIE/cutieITEM work, allow attendees of CreativeMornings to make their own street art. Each piece will be unique and have a box allowing them to fill in their message.
 
+// Post-processing:
+// Run the output PNGs (which I consider the canonical output) through sips, converting them to JPG:
+//   mkdir jpegs; sips -s format jpeg -s formatOptions 80 *.* --out jpegs
+
 HDrawablePool pool;
 HDrawablePool pool2;
 HColorPool colorsHearts;
@@ -23,7 +27,7 @@ void setup(){
   colorsHearts.add(#660000,3); // inject some more darker hearts
 
   // HEARTS
-  pool = new HDrawablePool(5000);
+  pool = new HDrawablePool(10000);
   pool.autoAddToStage()
     .add(new HShape("icon_822.svg"),2)
     .add(new HShape("icon_1308.svg"),4)
