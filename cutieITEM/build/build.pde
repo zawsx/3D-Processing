@@ -101,7 +101,7 @@ void draw() {
       blankoutSquare
         .noStroke()
         .fill(#FFFFFF)
-        .size(width,height)
+        .size(width,height) // the size of the square is the size of the canvas
       ;
       H.add(blankoutSquare);
 
