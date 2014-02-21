@@ -55,6 +55,7 @@ void setup(){
             .anchorAt(H.CENTER)
             .rotate( (int)random(72) * 5 ) // hard-locking rotation to 5 degree increments (360 degrees total)
             .size( (int)random(15,105) )
+          // .stroke(#333333, 75) // stroke opacity!
           ;
           d.randomColors(colorsHearts.fillAndStroke()); //.fillOnly();, .strokeOnly();, or .fillAndStroke(); are options
         }
